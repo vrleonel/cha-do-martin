@@ -32,6 +32,14 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
+      bodyAttributes={{
+        className: "teste",
+        style: {
+
+          background: "#00FF00"
+        }.toString()
+        
+      }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
