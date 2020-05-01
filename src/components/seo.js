@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { useFoxImage } from '../hooks/use-fox-image';
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -25,7 +26,8 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
+  const foxImage = useFoxImage().fixed.src;
 
   return (
     <Helmet
@@ -33,12 +35,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       bodyAttributes={{
-        className: "teste",
-        style: {
-
-          background: "#00FF00"
-        }.toString()
-        
+        className: "body-height",
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
@@ -58,6 +55,10 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: `https://chadomargin.surge.sh/${foxImage}`,
         },
         {
           name: `twitter:card`,

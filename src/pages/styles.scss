@@ -1,0 +1,13 @@
+:local(.links) {
+  color: #F00;
+  &:hover{
+    color: #0000FF;
+  }
+}
+
+:local(.shopList) {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-wrap: wrap;
+}

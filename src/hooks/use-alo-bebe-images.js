@@ -1,9 +1,9 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const useFoxImage = () => {
+export const useAloBebeImage = () => {
   const { staticImage } = useStaticQuery(graphql`
     query {
-      staticImage: file(relativePath: { eq: "raposinha.png" }) {
+      staticImage: file(relativePath: { eq: "alo-bebe.png" }) {
         childImageSharp {
           fixed(width: 200) {
             ...GatsbyImageSharpFixed
