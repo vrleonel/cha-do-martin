@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Feito por Vitor &amp; Tati com carinho para o Matin <span role="img" aria-label="heart">❤️</span>
+          © {new Date().getFullYear()}. Feito por Vitor &amp; Tati com carinho para o Matin <span role="img" aria-label="heart">❤️</span>
           {` `}
           <a href="https://vrleoenl.dev">vrleone.dev</a>
         </footer>
