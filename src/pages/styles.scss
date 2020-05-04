@@ -18,13 +18,14 @@ Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   display: flex;
   align-items: center;
   justify-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
+  margin: 0 0 1.45rem;
+
   a {
     height: 200px;
-    margin: .5%;
     width: 24%;
-    
     color: #666666;
     
     border: $border-default;
@@ -39,11 +40,12 @@ Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
     @include breakpoint('<=medium') {
       width: 49%;
+      margin: 1% 0;
     }
 
     @include breakpoint('<=small') { 
       width: 100%;
-      margin: 2% 0;
+      margin: 1% 0;
       border: $border-hover;
     }
   }

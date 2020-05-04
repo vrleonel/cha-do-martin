@@ -49,7 +49,7 @@ const IndexPage = () => {
         <p>Mas, apesar de vocês não poderem visitar o papai e a mamãe por conta to isolamento social,
           você ainda pode madar carinho virtualmente ❤️.
         </p>
-        <p>Fizemos algumas listas virtuais de chá de bebê nesses sites:</p>
+        <p>Eles fizeram algumas listas virtuais de chá de bebê nesses sites:</p>
       </section>
 
       <section className="shopList">
@@ -62,13 +62,14 @@ const IndexPage = () => {
       </section>
 
       <section className="text">
-        Você pode comprar em qualquer um deles que vemos receber tudinho do conforto do nosso lar.
+        
       </section>
 
-      <section>
+      <section className="text">
         <p>
-          <strong> Caso queria mandar algo para nós, esse é o endereço:</strong>
+          Você pode comprar em qualquer um deles que vamos receber tudinho do conforto do nosso lar.
         </p>
+        <strong>Caso queria mandar algo para nós, esse é o endereço:</strong>
         <address>
           Rua Comendador Elias Assi, 126 - Apto 42 <br />
           Caxingui, São Paulo - SP <br/>
@@ -81,8 +82,6 @@ const IndexPage = () => {
           <Image />
         </div>
       </section>
-      
-      {/* <Link to="/page-2/">Go to page 2</Link> */}
     </Layout>
   )
 }
