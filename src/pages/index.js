@@ -46,7 +46,7 @@ const IndexPage = () => {
           nas costas do papai, transmitindo afeto e carinho rodeados de docinhos.
         </p>
         <p>Mas, apesar de vocês não poderem visitar o papai e a mamãe por conta to isolamento social,
-          você ainda pode madar carinho virtualmente <span role="img" aria-label="heart">❤️</span>.
+          você ainda pode mandar carinho virtualmente <span role="img" aria-label="heart">❤️</span>.
         </p>
         <p>Eles fizeram algumas listas virtuais de chá de bebê nesses sites:</p>
       </section>
