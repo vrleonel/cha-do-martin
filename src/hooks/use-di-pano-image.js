@@ -5,7 +5,7 @@ export const useDiPanoImage = () => {
     query {
       staticImage: file(relativePath: { eq: "logo-dipano.png" }) {
         childImageSharp {
-          fixed(width: 200) {
+          fixed(width: 180) {
             ...GatsbyImageSharpFixed
           }
           fluid(maxWidth: 400) {

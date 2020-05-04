@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import styles from "./styles.scss";
+import "./styles.scss";
 
 import { useAloBebeImage } from '../hooks/use-alo-bebe-images';
 import { useDiPanoImage } from '../hooks/use-di-pano-image';
@@ -14,57 +14,75 @@ import { useTipTopImage } from '../hooks/use-tip-top-image';
 import Img from "gatsby-image";
 
 
-
-console.log(styles)
-
 const IndexPage = () => {
-  const tipTop = useTipTopImage();
   const LIST = [
-    useAloBebeImage(),
-    useDiPanoImage(), 
-    useNosDaviImage(),
-    useTipTopImage()
+    {
+      title: 'Alô Bebê',
+      link: 'https://www.alobebe.com.br/cha-de-bebe/enxoval/cha-do-martin.html,69346tatiana',
+      image: useAloBebeImage(),
+    },
+    {
+      title: 'Nós e o Davi',
+      link: 'https://www.noseodavi.com/lista/index/registry/id/Z6DSHFOONIBC/',
+      image: useNosDaviImage(),
+    },
+    {
+      title: 'Fraldas di Pano',
+      link: 'https://www.fraldasdipano.com.br/list/martinruizlopes',
+      image: useDiPanoImage()
+    },
+    {
+      title: 'Tip Top',
+      link: 'https://chadebebe.tiptop.com.br/listas/convidados/41ea77495cf0ca02',
+      image: useTipTopImage()
+    }
   ];
-  console.log(LIST)
   return (
     <Layout>
-      <SEO title="Home" />
-      <h1>Oi Pessoal!</h1>
-      <p>Quero convidar vocês para o meu chá de bebê.</p>
-      <p>Será totalmente virtual por conta do isolamento social.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
+      <SEO title="Chá do Martin" />
+      <section className="text">
+        <h2>Oi Pessoal, quero convidar vocês para o meu chá de bebê!</h2>
+        <p>
+          Não vai ser como eu esperava, com todo mundo passando a mão na barriga da mamãe, dando tapinhas
+          nas costas do papai, transmitindo afeto e carinho rodeados de docinhos.
+        </p>
+        <p>Mas, apesar de vocês não poderem visitar o papai e a mamãe por conta to isolamento social,
+          você ainda pode madar carinho virtualmente ❤️.
+        </p>
+        <p>Fizemos algumas listas virtuais de chá de bebê nesses sites:</p>
+      </section>
 
-      <section className={styles.shopList}>
-        {LIST.map( ({fixed}) => (
-
-          <a className={styles.links} href="https://www.noseodavi.com/lista/index/registry/id/Z6DSHFOONIBC/" target="_blank" rel="noopener noreferrer">
-            <Img fixed={fixed} />
-            <p>
-              Lista Nós e o Davi
-            </p>
+      <section className="shopList">
+        {LIST.map(({title, link, image}) => (
+          <a className="links" href={link} target="_blank" rel="noopener noreferrer">
+            <Img fixed={image.fixed} alt={title} title={title} />
+            <p>{title}</p>
           </a>
         ))}
       </section>
-      <ul>
-        <li>
-          <a href="https://www.fraldasdipano.com.br/list/martinruizlopes" target="_blank" rel="noopener noreferrer">
-            Lista Fraldas di Pano
-          </a>
-        </li>
-        <li>
-          <a href="https://www.alobebe.com.br/cha-de-bebe/enxoval/cha-do-martin.html,69346tatiana" target="_blank" rel="noopener noreferrer">
-            Lista alô bebê
-          </a>
-        </li>
-        <li>
-          <a href="https://chadebebe.tiptop.com.br/listas/convidados/41ea77495cf0ca02"  target="_blank" rel="noopener noreferrer">
-            Tip Top
-          </a>
-        </li>
-      </ul>
-      <Link to="/page-2/">Go to page 2</Link>
+
+      <section className="text">
+        Você pode comprar em qualquer um deles que vemos receber tudinho do conforto do nosso lar.
+      </section>
+
+      <section>
+        <p>
+          <strong> Caso queria mandar algo para nós, esse é o endereço:</strong>
+        </p>
+        <address>
+          Rua Comendador Elias Assi, 126 - Apto 42 <br />
+          Caxingui, São Paulo - SP <br/>
+          CEP: 05516-000
+        </address>
+      </section>
+      <section className="sign">
+        Obrigado, Martin.
+        <div style={{ maxWidth: `100px`, width: "100px", }}>
+          <Image />
+        </div>
+      </section>
+      
+      {/* <Link to="/page-2/">Go to page 2</Link> */}
     </Layout>
   )
 }

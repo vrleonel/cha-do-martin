@@ -5,7 +5,7 @@ export const useNosDaviImage = () => {
     query {
       staticImage: file(relativePath: { eq: "nos-davi.png" }) {
         childImageSharp {
-          fixed(width: 200) {
+          fixed(width: 136) {
             ...GatsbyImageSharpFixed
           }
           fluid(maxWidth: 400) {

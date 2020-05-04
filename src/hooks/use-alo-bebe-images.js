@@ -5,7 +5,7 @@ export const useAloBebeImage = () => {
     query {
       staticImage: file(relativePath: { eq: "alo-bebe.png" }) {
         childImageSharp {
-          fixed(width: 200) {
+          fixed(width: 160) {
             ...GatsbyImageSharpFixed
           }
           fluid(maxWidth: 400) {

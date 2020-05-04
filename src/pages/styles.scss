@@ -1,13 +1,76 @@
-:local(.links) {
+@import '../styles/breakpoints';
+
+.links {
   color: #F00;
   &:hover{
     color: #0000FF;
   }
 }
 
-:local(.shopList) {
+$border-default: 2px dotted #CACACA;
+$border-hover: 2px solid orange;
+
+$fonts: "Indie Flower", "Sacramento", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; 
+
+.shopList {
+  font-family: $fonts;
   display: flex;
   align-items: center;
   justify-items: center;
   flex-wrap: wrap;
+  width: 100%;
+  a {
+    height: 200px;
+    margin: .5%;
+    width: 24%;
+    
+    color: #666666;
+    
+    border: $border-default;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    
+
+    @include breakpoint('<=medium') {
+      width: 49%;
+    }
+
+    @include breakpoint('<=small') { 
+      width: 100%;
+      margin: 2% 0;
+      border: $border-hover;
+    }
+  }
+
+  a:active, a:visited {
+    color: #666666;
+  }
+
+  a:hover {
+    border: $border-hover;
+    background: #EFEFEF;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.text {
+  font-family: $fonts;
+}
+
+.sign{
+  font-family: $fonts;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
