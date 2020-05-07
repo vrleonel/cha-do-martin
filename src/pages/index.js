@@ -11,6 +11,7 @@ import { useNosDaviImage } from '../hooks/use-nos-davi-image';
 import { useTipTopImage } from '../hooks/use-tip-top-image';
 
 import Img from "gatsby-image";
+import MyForm from "../components/my-form";
 
 
 const IndexPage = () => {
@@ -52,8 +53,8 @@ const IndexPage = () => {
       </section>
 
       <section className="shopList">
-        {LIST.map(({title, link, image}) => (
-          <a className="links" href={link} target="_blank" rel="noopener noreferrer">
+        {LIST.map(({title, link, image}, index) => (
+          <a key={`link-${index}`} className="links" href={link} target="_blank" rel="noopener noreferrer">
             <Img fixed={image.fixed} alt={title} title={title} />
             <p>{title}</p>
           </a>
@@ -74,6 +75,10 @@ const IndexPage = () => {
           Caxingui, São Paulo - SP <br/>
           CEP: 05516-000
         </address>
+      </section>
+
+      <section className="text form-section">
+        <MyForm />
       </section>
       <section className="sign">
         Obrigado, Martin.
