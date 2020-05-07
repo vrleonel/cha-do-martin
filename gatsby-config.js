@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Chá do Martin`,
-    description: `Site com os links para compras do chá do martin`,
+    description: `Chá de bebê on-line do Martin. Mande seu carinho virtual. =D`,
     author: `@gatsbyjs`,
   },
   plugins: [

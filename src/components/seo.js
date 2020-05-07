@@ -58,7 +58,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://chadomargin.surge.sh/${foxImage}`,
+          content: `https://chadomartin.leonel.dev${foxImage}`,
         },
         {
           name: `twitter:card`,
