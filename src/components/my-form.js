@@ -56,8 +56,9 @@ export default function MyForm () {
           name="name"
           id="name"
           onChange={handleName}
+          className={status === "ERROR" && name === '' && 'input-error'}
           value={name}
-          placeholder="Martin Ruiz Lopes" 
+          placeholder="Seu nome"
         />
       </p>
       <p>
@@ -70,7 +71,7 @@ export default function MyForm () {
           rows="5"
           id="message"
           name="message"
-          placeholder="Escreva aqui a mensagem."
+          placeholder="Escreva aqui a mensagem"
           className={status === "ERROR" && message === '' && 'input-error'}
           value={message}
           onChange={handleMessage}
