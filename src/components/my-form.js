@@ -10,11 +10,9 @@ export default function MyForm () {
   const [message, setMessage] = useState('');
 
   function handleName(e) {
-    console.log(e.target.value)
     setName(e.target.value);
   }
   function handleMessage(e) {
-    console.log(e.target.value)
     setMessage(e.target.value);
   }
 
@@ -22,12 +20,12 @@ export default function MyForm () {
     ev.preventDefault();
     setStatus('');
     const form = ev.target;
-    const data = new FormData(form);
-    const xhr = new XMLHttpRequest();
+    const data = new window.FormData(form);
+    const xhr = new window.XMLHttpRequest();
     xhr.open(form.method, form.action);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.onreadystatechange = () => {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.readyState !== window.XMLHttpRequest.DONE) return;
       if (xhr.status === 200 && name !== "" && message !== "") {
         form.reset();
         setStatus("SUCCESS");
@@ -56,7 +54,7 @@ export default function MyForm () {
           name="name"
           id="name"
           onChange={handleName}
-          className={status === "ERROR" && name === '' && 'input-error'}
+          className={status === "ERROR" && name === '' ? 'input-error' : ''}
           value={name}
           placeholder="Seu nome"
         />
@@ -72,7 +70,7 @@ export default function MyForm () {
           id="message"
           name="message"
           placeholder="Escreva aqui a mensagem"
-          className={status === "ERROR" && message === '' && 'input-error'}
+          className={status === "ERROR" && message === '' ? 'input-error' : ''}
           value={message}
           onChange={handleMessage}
         />
