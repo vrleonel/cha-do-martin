@@ -5,7 +5,7 @@
   "settings": {
     "react": {
       "pragma": "React",
-      "version": "16.12"
+      "version": "16.13"
     }
   },
   "parser": "babel-eslint",

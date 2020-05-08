@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby";
-import useKonamiCode from '../hooks/use-konami-code';
+import useKonamiCode from 'hooks/use-konami-code'; // Konami Code by @gabrieluizramos
 
 import Header from "./header"
 import "./layout.css"
