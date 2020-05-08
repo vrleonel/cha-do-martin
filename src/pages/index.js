@@ -46,7 +46,7 @@ const IndexPage = () => {
           Não vai ser como eu esperava, com todo mundo passando a mão na barriga da mamãe, dando tapinhas
           nas costas do papai, transmitindo afeto e carinho rodeados de docinhos.
         </p>
-        <p>Mas, apesar de vocês não poderem visitar o papai e a mamãe por conta to isolamento social,
+        <p>Mas, apesar de vocês não poderem visitar o papai e a mamãe por conta do isolamento social,
           você ainda pode mandar carinho virtualmente <span role="img" aria-label="heart">❤️</span>.
         </p>
         <p>Eles fizeram algumas listas virtuais de chá de bebê nesses sites:</p>
