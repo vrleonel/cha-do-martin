@@ -29,7 +29,8 @@ const IndexPage = () => {
     {
       title: 'Fraldas di Pano',
       link: 'https://www.fraldasdipano.com.br/list/martinruizlopes',
-      image: useDiPanoImage()
+      image: useDiPanoImage(),
+      advise: "* Não precisa pagar frete"
     },
     {
       title: 'Tip Top',
@@ -53,10 +54,13 @@ const IndexPage = () => {
       </section>
 
       <section className="shopList">
-        {LIST.map(({title, link, image}, index) => (
+        {LIST.map(({title, link, image, advise}, index) => (
           <a key={`link-${index}`} className="links" href={link} target="_blank" rel="noopener noreferrer">
             <Img fixed={image.fixed} alt={title} title={title} />
             <p>{title}</p>
+            {advise && 
+              (<small><strong>* Não precisa contribuir com o frete!</strong></small>)
+            }
           </a>
         ))}
       </section>
