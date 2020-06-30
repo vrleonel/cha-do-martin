@@ -7,8 +7,8 @@ import "./styles.scss";
 
 import { useAloBebeImage } from '../hooks/use-alo-bebe-images';
 import { useDiPanoImage } from '../hooks/use-di-pano-image';
-import { useNosDaviImage } from '../hooks/use-nos-davi-image';
-import { useTipTopImage } from '../hooks/use-tip-top-image';
+// import { useNosDaviImage } from '../hooks/use-nos-davi-image';
+// import { useTipTopImage } from '../hooks/use-tip-top-image';
 
 import Img from "gatsby-image";
 import MyForm from "../components/my-form";
@@ -21,22 +21,22 @@ const IndexPage = () => {
       link: 'https://www.alobebe.com.br/cha-de-bebe/enxoval/cha-do-martin.html,69346tatiana',
       image: useAloBebeImage(),
     },
-    {
-      title: 'Nós e o Davi',
-      link: 'https://www.noseodavi.com/lista/index/registry/id/Z6DSHFOONIBC/',
-      image: useNosDaviImage(),
-    },
+    // {
+    //   title: 'Nós e o Davi',
+    //   link: 'https://www.noseodavi.com/lista/index/registry/id/Z6DSHFOONIBC/',
+    //   image: useNosDaviImage(),
+    // },
     {
       title: 'Fraldas di Pano',
       link: 'https://www.fraldasdipano.com.br/list/martinruizlopes',
       image: useDiPanoImage(),
       advise: "* Não precisa pagar frete"
     },
-    {
-      title: 'Tip Top',
-      link: 'https://chadebebe.tiptop.com.br/listas/convidados/41ea77495cf0ca02',
-      image: useTipTopImage()
-    }
+    // {
+    //   title: 'Tip Top',
+    //   link: 'https://chadebebe.tiptop.com.br/listas/convidados/41ea77495cf0ca02',
+    //   image: useTipTopImage()
+    // }
   ];
   return (
     <Layout>

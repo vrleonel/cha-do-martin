@@ -27,8 +27,9 @@ $grey: #CACACA;
 
   a {
     height: 200px;
-    width: 24%;
+    width: 49%;
     color: #666666;
+    margin: 1% 0;
     
     border: $border-default;
     text-align: center;
@@ -37,13 +38,6 @@ $grey: #CACACA;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-
-    
-
-    @include breakpoint('<=medium') {
-      width: 49%;
-      margin: 1% 0;
-    }
 
     @include breakpoint('<=small') { 
       width: 100%;
