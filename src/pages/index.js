@@ -5,7 +5,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import "./styles.scss";
 
-import { useAloBebeImage } from '../hooks/use-alo-bebe-images';
+// import { useAloBebeImage } from '../hooks/use-alo-bebe-images';
 import { useDiPanoImage } from '../hooks/use-di-pano-image';
 // import { useNosDaviImage } from '../hooks/use-nos-davi-image';
 // import { useTipTopImage } from '../hooks/use-tip-top-image';
@@ -16,11 +16,11 @@ import MyForm from "../components/my-form";
 
 const IndexPage = () => {
   const LIST = [
-    {
-      title: 'Alô Bebê',
-      link: 'https://www.alobebe.com.br/cha-de-bebe/enxoval/cha-do-martin.html,69346tatiana',
-      image: useAloBebeImage(),
-    },
+    // {
+    //   title: 'Alô Bebê',
+    //   link: 'https://www.alobebe.com.br/cha-de-bebe/enxoval/cha-do-martin.html,69346tatiana',
+    //   image: useAloBebeImage(),
+    // },
     // {
     //   title: 'Nós e o Davi',
     //   link: 'https://www.noseodavi.com/lista/index/registry/id/Z6DSHFOONIBC/',
@@ -50,7 +50,7 @@ const IndexPage = () => {
         <p>Mas, apesar de vocês não poderem visitar o papai e a mamãe por conta do isolamento social,
           você ainda pode mandar carinho virtualmente <span role="img" aria-label="heart">❤️</span>.
         </p>
-        <p>Eles fizeram algumas listas virtuais de chá de bebê nesses sites:</p>
+        <p>Eles fizeram uma lista virtual de chá de bebê nesses sites:</p>
       </section>
 
       <section className="shopList">
